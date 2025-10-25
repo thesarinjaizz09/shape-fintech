@@ -200,35 +200,35 @@ export default function WindowLayout({
                             <DropdownMenuContent
                                 side="bottom"
                                 align="end"
-                                className="text-emerald-100/80 w-40 bg-gradient-to-br from-[#000d08] via-[#001a10] to-[#000f09] shadow-inner border border-green-800/50 border-gray-700"
+                                className="text-emerald-100/80 w-35 bg-gradient-to-br from-[#000d08] via-[#001a10] to-[#000f09] shadow-inner border border-green-800/50 border-gray-700"
                             >
-                                <DropdownMenuLabel className="text-[10px]">Widget Actions</DropdownMenuLabel>
+                                <DropdownMenuLabel className="text-[10px]">Actions</DropdownMenuLabel>
                                 <DropdownMenuSeparator className="bg-gray-700" />
                                 <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
-                                    <Mail className="text-blue-400" style={{
-                                        width: '14px',
-                                        height: '14px'
+                                    <Mail className="text-emerald-300" style={{
+                                        width: '13px',
+                                        height: '13px'
                                     }} />
                                     Subscribe
                                 </DropdownMenuItem>
                                 <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
-                                    <Sheet className="text-blue-400" style={{
-                                        width: '14px',
-                                        height: '14px'
+                                    <Sheet className="text-emerald-300" style={{
+                                        width: '13px',
+                                        height: '13px'
                                     }} />
                                     Link Sheets
                                 </DropdownMenuItem>
                                 <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
-                                    <SquaresExclude className="text-blue-400" style={{
-                                        width: '14px',
-                                        height: '14px'
+                                    <SquaresExclude className="text-emerald-300" style={{
+                                        width: '13px',
+                                        height: '13px'
                                     }} />
                                     Export CSV
                                 </DropdownMenuItem>
                                 <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
-                                    <Braces className="text-blue-400" style={{
-                                        width: '14px',
-                                        height: '14px'
+                                    <Braces className="text-emerald-300" style={{
+                                        width: '13px',
+                                        height: '13px'
                                     }} />
                                     Export JSON
                                 </DropdownMenuItem>

@@ -47,7 +47,7 @@ const GlobalIndicesCaraousel = ({ selectedExchange }: GlobalIndicesSummaryProps)
 
     // Helper function to render tooltip content
     const renderTooltipContent = (item: IndexData | EquityData, type: 'index' | 'equity') => (
-        <div className="bg-[#0A0F1C] rounded-sm p-2 min-w-[150px] max-w-xs">
+        <div className="bg-gradient-to-br from-[#000d08] via-[#001a10] to-[#000f09] shadow-inner border border-green-800/50 border-gray-700 rounded-sm p-2 min-w-[150px] max-w-xs">
             <div className="flex items-center gap-2 mb-1">
                 <span className="text-accent font-semibold text-[9px]">{item.symbol}</span>
                 <span className="text-gray-400 text-[9px]">({type.toUpperCase()})</span>
