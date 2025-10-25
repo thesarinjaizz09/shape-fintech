@@ -30,7 +30,7 @@ import {
 // import TimeFilterBar from "./time-filters";
 
 const classes =
-    "bg-[#0A0F1C]/95 border border-accent/30 text-gray-200 rounded-md p-2 text-[10px] shadow-lg min-w-[50px] max-w-[180px] whitespace-pre-wrap";
+    "bg-[#001f11]/95 border border-accent/30 text-gray-200 rounded-md p-2 text-[10px] shadow-lg min-w-[50px] max-w-[180px] whitespace-pre-wrap";
 
 interface WindowLayoutProps {
     title: string;
@@ -88,7 +88,7 @@ export default function WindowLayout({
     return (
         <TooltipProvider>
             <div
-                className={`col-span-2 bg-[#0A0F1C] border border-gray-800 rounded-sm w-full text-gray-200 text-[10px] transition-all duration-300 backdrop-blur-md shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 relative overflow-auto custom-scroll 
+                className={`col-span-2 bg-[#001f11]/70 border border-green-900/40 backdrop-blur-md shadow-inner hover:shadow-[0_0_20px_rgba(0,255,100,0.05)] transition border border-gray-800 rounded-sm w-full text-gray-200 text-[10px] transition-all duration-300 backdrop-blur-lg shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 relative overflow-auto custom-scroll 
           ${isMinimized ? "h-fit p-2 opacity-90" : "p-2 pt-0 scale-100 opacity-100"}
           ${full ? "h-full w-full" : ""}
           ${className}`}
@@ -108,14 +108,14 @@ export default function WindowLayout({
             >
                 {/* Header */}
                 <div
-                    className={`flex justify-between items-center sticky top-0 z-20 bg-[#0A0F1C]/95 backdrop-blur-md
+                    className={`flex justify-between items-center sticky top-0 z-20
                         ${isMinimized ? "mb-0" : "mb-3"}
                         ${!isMinimized ? "border-b py-2 border-accent" : "border-none pb-0"}
                     `}
                 >
-                    <div className="text-accent flex items-center justify-center gap-2 text-[9px] pt-1">
+                    <div className="text-emerald-100/80 flex items-center justify-center gap-2 text-[11px] pt-1">
                         {Icon && <Icon className="w-3 h-3 inline" />}
-                        <span className="text-accent font-semibold">{title}</span>
+                        <span className="font-semibold">{title}</span>
                     </div>
 
                     <div className="flex gap-2 items-center">
@@ -141,17 +141,6 @@ export default function WindowLayout({
                             </TooltipTrigger>
                             <TooltipContent side="bottom" className={classes}>
                                 Maximize Widget
-                            </TooltipContent>
-                        </Tooltip>
-
-                        <Tooltip>
-                            <TooltipTrigger asChild>
-                                <Crosshair
-                                    className="w-3 h-3 cursor-pointer text-gray-400 hover:text-accent transition"
-                                />
-                            </TooltipTrigger>
-                            <TooltipContent side="bottom" className={classes}>
-                                Tradeshark Context
                             </TooltipContent>
                         </Tooltip>
 
@@ -211,24 +200,36 @@ export default function WindowLayout({
                             <DropdownMenuContent
                                 side="bottom"
                                 align="end"
-                                className="text-[9px] w-40 bg-[#0A0F1C] text-gray-200 border-gray-700"
+                                className="text-emerald-100/80 w-40 bg-gradient-to-br from-[#000d08] via-[#001a10] to-[#000f09] shadow-inner border border-green-800/50 border-gray-700"
                             >
-                                <DropdownMenuLabel className="text-[10px] text-accent">Widget Actions</DropdownMenuLabel>
+                                <DropdownMenuLabel className="text-[10px]">Widget Actions</DropdownMenuLabel>
                                 <DropdownMenuSeparator className="bg-gray-700" />
-                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer">
-                                    <Mail className="w-3 h-3 text-blue-400" />
+                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
+                                    <Mail className="text-blue-400" style={{
+                                        width: '14px',
+                                        height: '14px'
+                                    }} />
                                     Subscribe
                                 </DropdownMenuItem>
-                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer">
-                                    <Sheet className="w-3 h-3 text-blue-400" />
+                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
+                                    <Sheet className="text-blue-400" style={{
+                                        width: '14px',
+                                        height: '14px'
+                                    }} />
                                     Link Sheets
                                 </DropdownMenuItem>
-                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer">
-                                    <SquaresExclude className="w-3 h-3 text-blue-400" />
+                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
+                                    <SquaresExclude className="text-blue-400" style={{
+                                        width: '14px',
+                                        height: '14px'
+                                    }} />
                                     Export CSV
                                 </DropdownMenuItem>
-                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer">
-                                    <Braces className="w-3 h-3 text-blue-400" />
+                                <DropdownMenuItem className="flex items-center gap-2 hover:bg-primary cursor-pointer text-[10px]">
+                                    <Braces className="text-blue-400" style={{
+                                        width: '14px',
+                                        height: '14px'
+                                    }} />
                                     Export JSON
                                 </DropdownMenuItem>
                             </DropdownMenuContent>

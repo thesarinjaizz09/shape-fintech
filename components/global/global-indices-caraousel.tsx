@@ -93,7 +93,7 @@ const GlobalIndicesCaraousel = ({ selectedExchange }: GlobalIndicesSummaryProps)
                         return (
                             <Tooltip key={`${i.name}-${idx}`}>
                                 <TooltipTrigger asChild>
-                                    <div className="flex-shrink-0 flex flex bg-[#16223B]/80 border border-[#1E263A] rounded-sm px-2 py-1 min-w-[150px] shadow-lg cursor-pointer hover:bg-[#16223B]/90 transition-colors">
+                                    <div className="flex-shrink-0 flex flex bg-gradient-to-r from-emerald-500/20 to-green-800/30 text-emerald-300 border border-green-900/40 hover:from-emerald-500/30 hover:to-green-700/40 transition rounded-sm px-2 py-1 min-w-[150px] shadow-lg cursor-pointer hover:bg-[#16223B]/90 transition-colors">
                                         <div className="flex justify-center gap-3 items-center">
                                             <span className="text-gray-300 text-[10px] font-medium">{i.symbol}</span>
                                             <div className="flex gap-2 items-start">
