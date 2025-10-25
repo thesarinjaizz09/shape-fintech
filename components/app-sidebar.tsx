@@ -2,20 +2,17 @@
 
 import * as React from "react"
 import {
-  BookOpen,
-  Bot,
+  BotMessageSquare,
+  ChartCandlestick,
   Command,
-  Frame,
+  Gpu,
   LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
+  MessageSquareQuote,
   SquareTerminal,
+  Store,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
 import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
 import {
@@ -30,13 +27,13 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Demo User",
+    email: "demo@alphafusion.corp",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
     {
-      title: "Playground",
+      title: "Dashboard",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
@@ -56,51 +53,9 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Trading",
       url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
+      icon: ChartCandlestick,
       items: [
         {
           title: "General",
@@ -120,8 +75,55 @@ const data = {
         },
       ],
     },
+    {
+      title: "Bots",
+      url: "#",
+      icon: BotMessageSquare,
+      items: [
+        {
+          title: "Genesis",
+          url: "#",
+        },
+        {
+          title: "Explorer",
+          url: "#",
+        },
+        {
+          title: "Quantum",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Mining",
+      url: "#",
+      icon: Gpu,
+      items: [
+        {
+          title: "Introduction",
+          url: "#",
+        },
+        {
+          title: "Get Started",
+          url: "#",
+        },
+        {
+          title: "Tutorials",
+          url: "#",
+        },
+        {
+          title: "Changelog",
+          url: "#",
+        },
+      ],
+    }
   ],
   navSecondary: [
+    {
+      title: "About",
+      url: "#",
+      icon: Store,
+    },
     {
       title: "Support",
       url: "#",
@@ -130,24 +132,7 @@ const data = {
     {
       title: "Feedback",
       url: "#",
-      icon: Send,
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
+      icon: MessageSquareQuote,
     },
   ],
 }
@@ -162,13 +147,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <a href="#">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+              <a href="#" className="bg-gradient-to-tr from-green-500/20 to-emerald-700/40 flex items-center justify-center shadow-inner border border-green-800/50">
+                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-7 items-center justify-center rounded-sm">
                   <Command className="size-4" />
                 </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">Acme Inc</span>
-                  <span className="truncate text-xs">Enterprise</span>
+                <div className="grid flex-1 text-left text-xs leading-tight">
+                  <span className="truncate font-bold text-emerald-400">AlphaFusion</span>
+                  <span className="truncate text-[10px] text-green-200/80">Finance</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -177,7 +162,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
