@@ -88,17 +88,16 @@ export default function WindowLayout({
     return (
         <TooltipProvider>
             <div
-                className={`col-span-2 bg-[#001f11]/70 border border-green-900/40 backdrop-blur-md shadow-inner hover:shadow-[0_0_20px_rgba(0,255,100,0.05)] transition border border-gray-800 rounded-sm w-full text-gray-200 text-[10px] transition-all duration-300 backdrop-blur-lg shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 relative overflow-auto custom-scroll 
-          ${isMinimized ? "h-fit p-2 opacity-90" : "p-2 pt-0 scale-100 opacity-100"}
-          ${full ? "h-full w-full" : ""}
-          ${className}`}
+                className={`flex flex-col bg-[#001f11]/70 border border-green-900/40 backdrop-blur-md shadow-inner hover:shadow-[0_0_20px_rgba(0,255,100,0.05)] transition border border-gray-800 rounded-sm w-full text-gray-200 text-[10px] transition-all duration-300 backdrop-blur-lg shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 relative overflow-hidden custom-scroll
+    ${isMinimized ? "h-fit p-2 opacity-90" : "p-2 pt-0 scale-100 opacity-100"}
+    ${full ? "h-full w-full" : ""} ${className}`}
                 style={{
                     height: full
-                        ? '100%'
+                        ? "100%"
                         : !isMinimized && !fit
                             ? height
                             : !isMinimized && fit
-                                ? 'auto'
+                                ? "auto"
                                 : undefined,
                     maxHeight:
                         !isMinimized && !fit && max && !full
@@ -239,7 +238,7 @@ export default function WindowLayout({
 
                 {!isMinimized && (
                     <div
-                        className="overflow-y-auto"
+                        className="flex-1 overflow-y-auto"
                     >
                         {children}
                     </div>

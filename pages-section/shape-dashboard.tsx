@@ -4,6 +4,8 @@ import { AppSidebar } from '@/components/app-sidebar'
 import { SiteHeader } from "@/components/site-header"
 import GlobalIndicesCaraousel from '@/components/global/global-indices-caraousel'
 import BalanceWidget from './components/balance-widget'
+import ProfitLossWidget from './components/profit-loss-widget'
+import TradesharkSuggestions from './components/tradeshark-suggestions'
 import {
   SidebarInset,
   SidebarProvider,
@@ -20,6 +22,10 @@ const ShapeDashboard = () => {
             <div className="grid grid-cols-1 p-2 gap-2">
               <GlobalIndicesCaraousel selectedExchange="NASDAQ" />
               <BalanceWidget />
+              <div className="grid grid-cols-3 gap-2">
+                <ProfitLossWidget />
+                <TradesharkSuggestions />
+              </div>
             </div>
           </SidebarInset>
         </div>
