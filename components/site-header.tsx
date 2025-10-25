@@ -33,13 +33,13 @@ export function SiteHeader() {
         <Breadcrumb className="hidden sm:block">
           <BreadcrumbList className="text-emerald-100/80">
             <BreadcrumbItem>
-              <BreadcrumbLink href="#" className="text-xs">
+              <BreadcrumbLink href="#" className="text-[11px]">
                 Dashboard
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage className="text-emerald-100/80 text-xs">Global Dashboard</BreadcrumbPage>
+              <BreadcrumbPage className="text-emerald-100/80 text-[11px]">Global Dashboard</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

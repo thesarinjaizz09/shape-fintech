@@ -39,15 +39,11 @@ const data = {
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Global",
           url: "#",
         },
         {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
+          title: "More...",
           url: "#",
         },
       ],
@@ -58,19 +54,7 @@ const data = {
       icon: ChartCandlestick,
       items: [
         {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
+          title: "More...",
           url: "#",
         },
       ],
@@ -81,15 +65,7 @@ const data = {
       icon: BotMessageSquare,
       items: [
         {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
+          title: "More...",
           url: "#",
         },
       ],
@@ -100,19 +76,7 @@ const data = {
       icon: Gpu,
       items: [
         {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
+          title: "More...",
           url: "#",
         },
       ],
