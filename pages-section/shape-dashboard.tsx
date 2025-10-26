@@ -19,7 +19,7 @@ const ShapeDashboard = () => {
         <SiteHeader />
         <div className="flex flex-1">
           <AppSidebar />
-          <SidebarInset>
+          <SidebarInset className='max-h-[calc(100vh-(var(--spacing)*11.5))] overflow-hidden overflow-y-auto'>
             <div className="grid grid-cols-1 p-2 gap-2">
               <GlobalIndicesCaraousel selectedExchange="NASDAQ" />
               <BalanceWidget />
