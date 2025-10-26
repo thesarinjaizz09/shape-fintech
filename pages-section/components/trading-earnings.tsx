@@ -50,6 +50,8 @@ const TradingEarnings = () => {
         { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
     ];
 
+    console.log({ vaults })
+
     return (
         <WindowLayout title="Trading Earnings Overview" icon={CircleDollarSign} showFilters={false} fit={true}>
             <div className="flex items-start justify-between p-2 mb-2 shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm">
@@ -57,15 +59,26 @@ const TradingEarnings = () => {
                     <h3 className="text-[10px] text-gray-400">Session Earnings</h3>
                     <div className="text-[11px] font-semibold text-green-400">{formatPrice(1000)}</div>
                 </div>
-                <div className="flex items-end justify-end">
+                <div className="flex items-end justify-end h-[35px] w-[70px]">
                     <div className="w-full h-full">
                         <ResponsiveContainer width="100%" height="100%">
                             <LineChart
                                 data={vaults[0].data}
-                                margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+                                margin={{ top: 0, right: 0, left: -60, bottom: -30 }}
                             >
-                                <XAxis axisLine={false} tick={false} />
-                                <YAxis axisLine={false} tick={false} domain={["auto", "auto"]} />
+                                <XAxis
+                                    axisLine={{ stroke: "rgba(52, 211, 153, 0.3)", strokeWidth: 1 }}
+                                    tickLine={false}
+                                    ticks={[]}
+                                    tick={false}
+                                />
+                                <YAxis
+                                    axisLine={{ stroke: "rgba(52, 211, 153, 0.3)", strokeWidth: 1 }}
+                                    tickLine={false}
+                                    ticks={[]}
+                                    tick={false}
+                                    domain={["auto", "auto"]}
+                                />
                                 <Line
                                     type="monotone"
                                     dataKey="value"
