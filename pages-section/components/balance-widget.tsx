@@ -55,9 +55,8 @@ const BalanceWidget = () => {
                                     <ArrowDownRight size={10} className="text-red-400" />
                                 )}
                                 <span
-                                    className={`text-[10px] font-semibold ${
-                                        isPositive ? "text-emerald-400" : "text-red-400"
-                                    }`}
+                                    className={`text-[10px] font-semibold ${isPositive ? "text-emerald-400" : "text-red-400"
+                                        }`}
                                 >
                                     {isPositive ? "+" : ""}
                                     {change}%
@@ -73,8 +72,20 @@ const BalanceWidget = () => {
                                         data={data}
                                         margin={{ top: 0, right: 0, left: -50, bottom: -30 }}
                                     >
-                                        <XAxis axisLine={false} tick={false} />
-                                        <YAxis axisLine={false} tick={false} domain={["auto", "auto"]} />
+                                        {/* Subtle Axis Lines Only */}
+                                        <XAxis
+                                            axisLine={{ stroke: "rgba(52, 211, 153, 0.3)", strokeWidth: 1 }}
+                                            tickLine={false}
+                                            ticks={[]}
+                                            tick={false}
+                                        />
+                                        <YAxis
+                                            axisLine={{ stroke: "rgba(52, 211, 153, 0.3)", strokeWidth: 1 }}
+                                            tickLine={false}
+                                            ticks={[]}
+                                            tick={false}
+                                            domain={["auto", "auto"]}
+                                        />
                                         <Line
                                             type="monotone"
                                             dataKey="value"
