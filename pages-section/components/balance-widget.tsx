@@ -35,7 +35,7 @@ const BalanceWidget = () => {
         )
 
     return (
-        <WindowLayout title="Account Balance Widget" icon={Scale} fit={true} showFilters={false}>
+        <WindowLayout title="Account Balance Widget" icon={Scale} fit={true} showFilters={true}>
             <div className="grid md:grid-cols-4 gap-2">
                 {vaults.map(({ title, balance, change, isPositive, data }, i) => (
                     <div
