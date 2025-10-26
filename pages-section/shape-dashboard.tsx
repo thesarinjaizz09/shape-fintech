@@ -8,6 +8,7 @@ import ProfitLossWidget from './components/profit-loss-widget'
 import TradesharkSuggestions from './components/tradeshark-suggestions'
 import TradingEarnings from './components/trading-earnings'
 import EarningsEventsPanel from './components/earnings-events-panel'
+import SocialSentimentBoard from './components/social-sentiment-board'
 import {
   SidebarInset,
   SidebarProvider,
@@ -31,6 +32,7 @@ const ShapeDashboard = () => {
               <div className="grid grid-cols-3 gap-2">
                 <TradingEarnings />
                 <EarningsEventsPanel />
+                <SocialSentimentBoard />
               </div>
             </div>
           </SidebarInset>
