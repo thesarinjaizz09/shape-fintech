@@ -33,6 +33,7 @@ interface DynamicTableProps {
     isDialog?: boolean; // new prop to adjust row count limit
     mode?: 'all' | 'paginated';
     onTableModeChange?: (mode: "all" | "paginated") => void;
+    showActions?: boolean;
 }
 
 function getColorClass(value: any): string {
@@ -76,6 +77,7 @@ const DynamicTable: React.FC<DynamicTableProps> = ({
     isDialog = false,
     mode = 'paginated',
     onTableModeChange,
+    showActions = false
 }) => {
     const [sortConfig, setSortConfig] = useState<{ key: string; direction: "asc" | "desc" } | null>(null);
     const [filters, setFilters] = useState<Record<string, string>>({});
@@ -173,6 +175,23 @@ const DynamicTable: React.FC<DynamicTableProps> = ({
                             />
                         </TableHead>
                     ))}
+                    {
+                        showActions && (
+                            <TableHead className="text-left text-white font-semibold p-2">
+                                <div className="flex items-center justify-between w-full cursor-pointer select-none hover:text-accent transition-all">
+                                    <span className="truncate">Actions</span>
+                                    <ArrowUpDown
+                                        className={`w-3 h-3 ml-1 shrink-0 transition-transform`}
+                                    />
+                                </div>
+                                <input
+                                    type="text"
+                                    placeholder="filter..."
+                                    className="w-full text-[9px] mt-1 bg-transparent border-b border-gray-700 focus:border-accent outline-none text-gray-300 placeholder-gray-500"
+                                />
+                            </TableHead>
+                        )
+                    }
                 </TableRow>
             </TableHeader>
             <TableBody>
@@ -197,6 +216,13 @@ const DynamicTable: React.FC<DynamicTableProps> = ({
                                                 </TableCell>
                                             );
                                         })}
+                                        {
+                                            showActions && (
+                                                <TableCell className={`text-center px-2 py-2 max-w-[200px] truncate`}>
+                                                    <span className="border px-[7px] py-[3px] cursor-pointer rounded-sm">Run Bot</span>
+                                                </TableCell>
+                                            )
+                                        }
                                     </TableRow>
                                 </TooltipTrigger>
                                 <TooltipContent className="bg-gradient-to-br from-[#000d08] via-[#001a10] to-[#000f09] shadow-inner border border-green-800/50 border-gray-700 rounded-md p-2 text-[9px] shadow-lg min-w-[150px] max-w-xs whitespace-pre-wrap">

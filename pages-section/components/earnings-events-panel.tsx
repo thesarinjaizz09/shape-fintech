@@ -256,7 +256,7 @@ export default function EarningsEventsPanel({ rowsPerPage = 3 }: { rowsPerPage?:
 
             {/* Pagination */}
             {filteredData.length > rowsPerPage && (
-                <div className="flex justify-between items-center text-[10px] text-gray-300 px-3 py-2 border-t border-gray-800 bg-[#001f11]/70 mt-2">
+                <div className="flex justify-between items-center text-[10px] text-gray-300 px-3 py-2 border-t border-gray-800 bg-[#0B1220]/90 mt-2">
                     <button
                         className="flex items-center gap-1 text-accent disabled:text-gray-600"
                         disabled={currentPage === 1}

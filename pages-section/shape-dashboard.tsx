@@ -9,6 +9,8 @@ import TradesharkSuggestions from './components/tradeshark-suggestions'
 import TradingEarnings from './components/trading-earnings'
 import EarningsEventsPanel from './components/earnings-events-panel'
 import SocialSentimentBoard from './components/social-sentiment-board'
+import MacroDataPanel from './components/macrodata-panel'
+import SecurityTrustSection from '@/components/global/security-section'
 import {
   SidebarInset,
   SidebarProvider,
@@ -30,10 +32,17 @@ const ShapeDashboard = () => {
                 <TradesharkSuggestions />
               </div>
               <div className="grid grid-cols-3 gap-2">
-                <TradingEarnings />
                 <EarningsEventsPanel />
+                <TradingEarnings />
                 <SocialSentimentBoard />
               </div>
+              <div className="grid grid-cols-3 gap-2">
+                <TradesharkSuggestions />
+                <MacroDataPanel />
+              </div>
+
+              <SecurityTrustSection />
+
               <div className="w-full bg-[#0A0F1C] px-4 py-3 text-gray-400 flex items-center justify-center border border-gray-800 rounded-sm w-full text-gray-200 text-[10px] transition-all duration-300 backdrop-blur-md shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 relative overflow-hidden bg-[#001f11]/70 border border-green-900/40 backdrop-blur-md">
                 Designed & Developed with ❤️ by Alphafusion Corporation
               </div>

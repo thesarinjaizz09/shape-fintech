@@ -42,13 +42,14 @@ const TradingEarnings = () => {
         )
 
     const tableData = [
-        { Ticker: "AAPL", Action: "BUY", Target: "$220", Horizon: "2W", Score: "8.5" },
-        { Ticker: "TSLA", Action: "HOLD", Target: "$250", Horizon: "1M", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
+        { "Session": "Morning Trade", "Earnings": "+$1,250.50", "Change": "+5.2%", "Performance": "Medium" },
+        { "Session": "Afternoon Swing", "Earnings": "$980.75", "Change": "3.8%", "Performance": "Average" },
+        { "Session": "Evening Options", "Earnings": "-$450.20", "Change": "-2.1%", "Performance": "Low" },
+        { "Session": "Overnight Crypto", "Earnings": "+$1,875.00", "Change": "+7.5%", "Performance": "High" },
+        { "Session": "Autobot Vault", "Earnings": "$1,100.30", "Change": "4.5%", "Performance": "Medium" },
+        { "Session": "Main Vault", "Earnings": "$2,300.00", "Change": "8.1%", "Performance": "High" },
     ];
+
 
     console.log({ vaults })
 
@@ -92,7 +93,7 @@ const TradingEarnings = () => {
                     </div>
                 </div>
             </div>
-            <DynamicTable headers={["Ticker", "Action", "Target", "Horizon", "Score"]} data={tableData} rowsPerPageProps={4} />
+            <DynamicTable headers={["Session", "Earnings", "Change", "Performance"]} data={tableData} rowsPerPageProps={4} />
         </WindowLayout>
     );
 };

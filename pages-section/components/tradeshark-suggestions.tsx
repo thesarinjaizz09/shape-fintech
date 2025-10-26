@@ -7,13 +7,14 @@ import SentimentMeter from "@/components/global/sentiment-gauge";
 const TradesharkSuggestions = () => {
 
     const tableData = [
-        { Ticker: "AAPL", Action: "BUY", Target: "$220", Horizon: "2W", Score: "8.5" },
-        { Ticker: "TSLA", Action: "HOLD", Target: "$250", Horizon: "1M", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
-        { Ticker: "MSFT", Action: "SELL", Target: "$395", Horizon: "3D", Score: "8.5" },
+        { "Bot Name": "Astra AI", "ROI %": "12.5%", "Risk Level": "Low" },
+        { "Bot Name": "Valkyrie Pro", "ROI %": "8.7%", "Risk Level": "Medium" },
+        { "Bot Name": "Sentinel Edge", "ROI %": "15.2%", "Risk Level": "High" },
+        { "Bot Name": "TitanX", "ROI %": "9.3%", "Risk Level": "Medium" },
+        { "Bot Name": "NeuralAlpha", "ROI %": "11.8%", "Risk Level": "Low" },
+        { "Bot Name": "RedMamba", "ROI %": "17.6%", "Risk Level": "High" },
     ];
+
 
     return (
         <WindowLayout title="Autobots Overview" icon={Bot} showFilters={true} fit={true}>
@@ -24,7 +25,7 @@ const TradesharkSuggestions = () => {
                 </div>
                 <SentimentMeter value={82} />
             </div>
-            <DynamicTable headers={["Ticker", "Action", "Target", "Horizon", "Score"]} data={tableData}rowsPerPageProps={3} />
+            <DynamicTable headers={["Bot Name", "ROI %", "Risk Level"]} data={tableData} rowsPerPageProps={3} showActions={true} />
         </WindowLayout>
     );
 };
