@@ -108,10 +108,12 @@ const ProfitLossSection = () => {
                             <Tooltip
                                 cursor={{ fill: "rgba(6, 95, 70, 0.1)" }}
                                 contentStyle={{
-                                    backgroundColor: "rgba(6, 95, 70, 0.9)",
-                                    border: "none",
-                                    color: "#d1fae5",
-                                    fontSize: "11px",
+                                    color: "#ffffff", // text color white
+                                    background: "linear-gradient(to bottom right, #78968aff, #2e5244ff, #2b3d36ff)", // gradient
+                                    boxShadow: "inset 0 2px 4px rgba(0,0,0,0.6)", // shadow-inner
+                                    border: "1px solid rgba(0,128,0,0.5)", // border-green-800/50
+                                    borderRadius: "0.125rem", // rounded-sm (~2px)
+                                    padding: "0.25rem 0.5rem", // slightly smaller padding        
                                 }}
                             />
                             <Bar
@@ -220,6 +222,7 @@ const ProfitLossSection = () => {
                                     ))}
                                 </Pie>
                                 <Tooltip
+                                    cursor={{ fill: "rgba(6, 95, 70, 0.1)" }}
                                     contentStyle={{
                                         color: "#ffffff", // text color white
                                         background: "linear-gradient(to bottom right, #78968aff, #2e5244ff, #2b3d36ff)", // gradient
