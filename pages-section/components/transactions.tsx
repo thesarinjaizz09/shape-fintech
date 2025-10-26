@@ -11,7 +11,7 @@ import { LineChart, Line, ResponsiveContainer, XAxis, YAxis } from "recharts"
 
 
 
-const TradingEarnings = () => {
+const Transactions = () => {
     const { formatPrice } = useCurrency();
     const [vaults, setVaults] = useState<any[]>([])
 
@@ -41,20 +41,71 @@ const TradingEarnings = () => {
             </WindowLayout>
         )
 
-    const tableData = [
-        { "Session": "Morning Trade", "Earnings": "+$1,250.50", "Change": "+5.2%", "Performance": "Medium" },
-        { "Session": "Afternoon Swing", "Earnings": "$980.75", "Change": "3.8%", "Performance": "Average" },
-        { "Session": "Evening Options", "Earnings": "-$450.20", "Change": "-2.1%", "Performance": "Low" },
-        { "Session": "Overnight Crypto", "Earnings": "+$1,875.00", "Change": "+7.5%", "Performance": "High" },
-        { "Session": "Autobot Vault", "Earnings": "$1,100.30", "Change": "4.5%", "Performance": "Medium" },
-        { "Session": "Main Vault", "Earnings": "$2,300.00", "Change": "8.1%", "Performance": "High" },
-    ];
+const transactionsData = [
+  {
+    "ID": "TXN-1001",
+    "Date": "2025-10-25 09:15",
+    "Type": "Buy",
+    "Asset": "AAPL",
+    "Amount ($)": "1,200.50",
+    "Status": "Completed"
+  },
+  {
+    "ID": "TXN-1002",
+    "Date": "2025-10-25 11:30",
+    "Type": "Sell",
+    "Asset": "TSLA",
+    "Amount ($)": "950.75",
+    "Status": "Completed"
+  },
+  {
+    "ID": "TXN-1003",
+    "Date": "2025-10-25 14:20",
+    "Type": "Deposit",
+    "Asset": "USD",
+    "Amount ($)": "2,500.00",
+    "Status": "Completed"
+  },
+  {
+    "ID": "TXN-1004",
+    "Date": "2025-10-25 16:45",
+    "Type": "Withdrawal",
+    "Asset": "USD",
+    "Amount ($)": "1,000.00",
+    "Status": "Pending"
+  },
+  {
+    "ID": "TXN-1005",
+    "Date": "2025-10-25 17:30",
+    "Type": "Buy",
+    "Asset": "ETH-USD",
+    "Amount ($)": "1,800.00",
+    "Status": "Completed"
+  },
+  {
+    "ID": "TXN-1006",
+    "Date": "2025-10-25 18:50",
+    "Type": "Sell",
+    "Asset": "BTC-USD",
+    "Amount ($)": "3,200.25",
+    "Status": "Completed"
+  },
+  {
+    "ID": "TXN-1007",
+    "Date": "2025-10-25 20:10",
+    "Type": "Deposit",
+    "Asset": "USD",
+    "Amount ($)": "500.00",
+    "Status": "Completed"
+  },
+];
+
 
     return (
         <WindowLayout title="Trading Earnings Overview" icon={CircleDollarSign} showFilters={true} fit={true} showSectorFilter={false}>
             <div className="flex items-start justify-between p-2 mb-2 shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm">
                 <div>
-                    <h3 className="text-[10px] text-gray-400">Session Earnings</h3>
+                    <h3 className="text-[10px] text-gray-400">Transaction Volume</h3>
                     <div className="text-[11px] font-semibold text-green-400">{formatPrice(1000)}</div>
                 </div>
                 <div className="flex items-end justify-end h-[35px] w-[70px]">
@@ -90,9 +141,9 @@ const TradingEarnings = () => {
                     </div>
                 </div>
             </div>
-            <DynamicTable headers={["Session", "Earnings", "Change", "Performance"]} data={tableData} rowsPerPageProps={4} />
+            <DynamicTable headers={["ID", "Date", "Type", "Asset", "Amount ($)", "Status"]} data={transactionsData} rowsPerPageProps={4} />
         </WindowLayout>
     );
 };
 
-export default TradingEarnings;
+export default Transactions;

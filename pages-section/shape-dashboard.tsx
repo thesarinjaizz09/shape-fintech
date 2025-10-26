@@ -11,6 +11,7 @@ import EarningsEventsPanel from './components/earnings-events-panel'
 import SocialSentimentBoard from './components/social-sentiment-board'
 import MacroDataPanel from './components/macrodata-panel'
 import SecurityTrustSection from '@/components/global/security-section'
+import Transactions from './components/transactions'
 import {
   SidebarInset,
   SidebarProvider,
@@ -37,7 +38,7 @@ const ShapeDashboard = () => {
                 <SocialSentimentBoard />
               </div>
               <div className="grid grid-cols-3 gap-2">
-                <TradesharkSuggestions />
+                <Transactions />
                 <MacroDataPanel />
               </div>
 
