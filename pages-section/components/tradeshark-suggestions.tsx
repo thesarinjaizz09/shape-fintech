@@ -16,7 +16,7 @@ const TradesharkSuggestions = () => {
     ];
 
     return (
-        <WindowLayout title="Autobots Overview" icon={Bot} showFilters={false} fit={true}>
+        <WindowLayout title="Autobots Overview" icon={Bot} showFilters={true} fit={true}>
             <div className="flex items-start justify-between p-2 mb-2 shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm">
                 <div>
                     <h3 className="text-[10px] text-gray-400">Overall Sentiment</h3>

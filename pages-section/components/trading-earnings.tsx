@@ -53,7 +53,7 @@ const TradingEarnings = () => {
     console.log({ vaults })
 
     return (
-        <WindowLayout title="Trading Earnings Overview" icon={CircleDollarSign} showFilters={false} fit={true}>
+        <WindowLayout title="Trading Earnings Overview" icon={CircleDollarSign} showFilters={true} fit={true} showSectorFilter={false}>
             <div className="flex items-start justify-between p-2 mb-2 shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm">
                 <div>
                     <h3 className="text-[10px] text-gray-400">Session Earnings</h3>

@@ -29,7 +29,7 @@ const BalanceWidget = () => {
 
     if (vaults.length === 0)
         return (
-            <WindowLayout title="Account Balance Widget" icon={Scale} fit={true} showFilters={false}>
+            <WindowLayout title="Account Balance Widget" icon={Scale} fit={true} showFilters={true}>
                 <p className="text-sm text-gray-400">Loading balances...</p>
             </WindowLayout>
         )
