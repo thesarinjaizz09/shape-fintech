@@ -65,7 +65,7 @@ const ProfitLossSection = () => {
         >
             <div className=" grid md:grid-cols-2 gap-2 col-span-2 h-full">
                 {/* Bar Chart */}
-                <div className="h-full flex flex-col bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm">
+                <div className="h-full flex flex-col bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm min-h-64">
                     <span className="text-[10px] text-green-300/80 font-semibold mb-5 border-b pb-1 border-accent flex items-center justify-between">
                         Profit Performance
                         <DropdownMenu>
@@ -133,7 +133,7 @@ const ProfitLossSection = () => {
                 </div>
 
                 {/* Pie Chart */}
-                <div className="h-full flex flex-col bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm relative">
+                <div className="h-full flex flex-col bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm relative min-h-64">
                     {/* Header */}
                     <span className="text-[10px] text-green-300/80 font-semibold border-b border-accent pb-1 flex items-center justify-between">
                         Portfolio Allocation
