@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function SentimentMeter({ value = 75 }) {
   // Value between 0 and 100
   const angle = (value / 100) * 180; // convert to semi-circle angle

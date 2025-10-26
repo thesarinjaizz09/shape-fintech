@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import {
   ArrowUpDown,
   Search,
@@ -10,7 +10,6 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
-import { Button } from '@/components/ui/button';
 import WindowLayout from '@/components/window-layout';
 import { NoResults } from '@/components/ui/no-results';
 

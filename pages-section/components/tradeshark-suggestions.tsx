@@ -1,5 +1,5 @@
 'use client'
-import { Bot, Brain } from "lucide-react";
+import { Bot } from "lucide-react";
 import WindowLayout from "@/components/window-layout";
 import DynamicTable from "@/components/global/dynamic-table";
 import SentimentMeter from "@/components/global/sentiment-gauge";

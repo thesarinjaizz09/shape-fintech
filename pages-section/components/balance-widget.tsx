@@ -5,9 +5,6 @@ import WindowLayout from "@/components/window-layout"
 import { Scale, ArrowUpRight, ArrowDownRight, Menu, Landmark, Wallet } from "lucide-react"
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import {
-    CircleEllipsis, Mail, SquaresExclude, Sheet, Braces
-} from "lucide-react";
-import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,

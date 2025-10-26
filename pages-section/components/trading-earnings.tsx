@@ -2,10 +2,9 @@
 import {
     useState, useEffect
 } from "react";
-import { Bot, Brain, CircleDollarSign, Scale } from "lucide-react";
+import { CircleDollarSign, Scale } from "lucide-react";
 import WindowLayout from "@/components/window-layout";
 import DynamicTable from "@/components/global/dynamic-table";
-import SentimentMeter from "@/components/global/sentiment-gauge";
 import { useCurrency } from "@/hooks/use-currency";
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis } from "recharts"
 
