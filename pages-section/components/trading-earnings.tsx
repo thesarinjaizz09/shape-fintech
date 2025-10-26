@@ -92,7 +92,7 @@ const TradingEarnings = () => {
                     </div>
                 </div>
             </div>
-            <DynamicTable headers={["Ticker", "Action", "Target", "Horizon", "Score"]} data={tableData} rowsPerPageProps={3} />
+            <DynamicTable headers={["Ticker", "Action", "Target", "Horizon", "Score"]} data={tableData} rowsPerPageProps={4} />
         </WindowLayout>
     );
 };
