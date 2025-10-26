@@ -180,7 +180,7 @@ export default function EarningsEventsPanel({ rowsPerPage = 3 }: { rowsPerPage?:
     };
 
     return (
-        <WindowLayout title="Earnings / Dividends / Events" icon={CalendarDays} fit={true}>
+        <WindowLayout title="Events & News" icon={CalendarDays} fit={true}>
             {/* Search + Sort */}
             <div className="flex flex-col md:flex-row items-center justify-between mb-2 gap-2">
                 <div className="flex items-center rounded-sm px-2 py-1 w-full max-w-xs bg-[#001f11]/70 border border-gray-700">

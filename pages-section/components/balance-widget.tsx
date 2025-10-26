@@ -48,7 +48,7 @@ const BalanceWidget = () => {
                                 <span className="text-[11px] text-green-300/80 font-semibold">{title}</span>
                                 <p className="text-sm font-bold text-green-100 mt-2">${balance}</p>
                             </div>
-                            <div className="flex items-center mt-1">
+                            <div className="flex items-center">
                                 {isPositive ? (
                                     <ArrowUpRight size={10} className="text-emerald-400" />
                                 ) : (
