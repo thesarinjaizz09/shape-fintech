@@ -27,7 +27,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
-// import TimeFilterBar from "./time-filters";
+import ModernTimeFilter from "./global/time-filters";
 
 const classes =
     "bg-[#001f11]/95 border border-accent/30 text-gray-200 rounded-md p-2 text-[10px] shadow-lg min-w-[50px] max-w-[180px] whitespace-pre-wrap";
@@ -161,9 +161,9 @@ export default function WindowLayout({
                                 <DropdownMenuContent
                                     side="bottom"
                                     align="end"
-                                    className="text-[9px] max-w-lg bg-[#0A0F1C] text-gray-200 border-gray-700"
+                                    className="text-[9px] max-w-lg text-emerald-100/80 bg-gradient-to-br from-[#000d08] via-[#001a10] to-[#000f09] shadow-inner border border-green-800/50 border-gray-700"
                                 >
-                                    {/* <TimeFilterBar showSectorFilter={showSectorFilter} /> */}
+                                    <ModernTimeFilter showSectorFilter={false} />
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         }
