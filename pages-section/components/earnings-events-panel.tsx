@@ -183,7 +183,7 @@ export default function EarningsEventsPanel({ rowsPerPage = 3 }: { rowsPerPage?:
         <WindowLayout title="Earnings / Dividends / Events" icon={CalendarDays} fit={true}>
             {/* Search + Sort */}
             <div className="flex flex-col md:flex-row items-center justify-between mb-2 gap-2">
-                <div className="flex items-center bg-[#10182A] rounded-sm px-2 py-1 w-full max-w-xs border border-gray-700">
+                <div className="flex items-center rounded-sm px-2 py-1 w-full max-w-xs bg-[#001f11]/70 border border-gray-700">
                     <Search className="w-3 h-3 text-gray-400 mr-2" />
                     <input
                         type="text"
@@ -199,13 +199,13 @@ export default function EarningsEventsPanel({ rowsPerPage = 3 }: { rowsPerPage?:
                 <div className="flex gap-3 text-[10px] text-gray-400">
                     <button
                         onClick={() => handleSort("Date")}
-                        className="flex items-center gap-1 hover:text-accent bg-[#10182A] rounded-sm px-2 py-1 border border-gray-700"
+                        className="flex items-center gap-1 hover:text-accent bg-[#001f11]/70 border border-gray-700 rounded-sm px-2 py-1"
                     >
                         Date <ArrowUpDown className="w-3 h-3" />
                     </button>
                     <button
                         onClick={() => handleSort("Impact")}
-                        className="flex items-center gap-1 hover:text-accent bg-[#10182A] rounded-sm px-2 py-1 border border-gray-700"
+                        className="flex items-center gap-1 hover:text-accent bg-[#001f11]/70 border border-gray-700 rounded-sm px-2 py-1"
                     >
                         Impact <ArrowUpDown className="w-3 h-3" />
                     </button>
@@ -219,7 +219,7 @@ export default function EarningsEventsPanel({ rowsPerPage = 3 }: { rowsPerPage?:
                         <div
                             key={idx}
                             onClick={() => setSelectedEvent(event)}
-                            className="cursor-pointer bg-[#0B1220] border border-gray-800 p-2 rounded-sm shadow-md hover:shadow-[#E3B341]/20 transition-all flex flex-col"
+                            className="cursor-pointer bg-gradient-to-r from-emerald-500/20 to-green-800/30 border border-green-900/40 p-2 rounded-sm shadow-md hover:shadow-[#E3B341]/20 transition-all flex flex-col"
                         >
 
                             <div className="flex justify-between items-start">
@@ -256,7 +256,7 @@ export default function EarningsEventsPanel({ rowsPerPage = 3 }: { rowsPerPage?:
 
             {/* Pagination */}
             {filteredData.length > rowsPerPage && (
-                <div className="flex justify-between items-center text-[10px] text-gray-300 px-3 py-2 border-t border-gray-800 bg-[#0B1220]/90 mt-2">
+                <div className="flex justify-between items-center text-[10px] text-gray-300 px-3 py-2 border-t border-gray-800 bg-[#001f11]/70 mt-2">
                     <button
                         className="flex items-center gap-1 text-accent disabled:text-gray-600"
                         disabled={currentPage === 1}
