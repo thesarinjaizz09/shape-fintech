@@ -34,6 +34,9 @@ const ShapeDashboard = () => {
                 <EarningsEventsPanel />
                 <SocialSentimentBoard />
               </div>
+              <div className="w-full bg-[#0A0F1C] px-4 py-3 text-gray-400 flex items-center justify-center border border-gray-800 rounded-sm w-full text-gray-200 text-[10px] transition-all duration-300 backdrop-blur-md shadow-lg shadow-[#E3B341]/10 hover:shadow-[#E3B341]/20 relative overflow-hidden bg-[#001f11]/70 border border-green-900/40 backdrop-blur-md">
+                Designed & Developed with ❤️ by Alphafusion Corporation
+              </div>
             </div>
           </SidebarInset>
         </div>
