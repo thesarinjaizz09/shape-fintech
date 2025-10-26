@@ -28,19 +28,20 @@ const ShapeDashboard = () => {
             <div className="grid grid-cols-1 p-2 gap-2">
               <GlobalIndicesCaraousel selectedExchange="NASDAQ" />
               <BalanceWidget />
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid md:grid-cols-3 md:gap-2">
                 <ProfitLossWidget />
                 <TradesharkSuggestions />
               </div>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
                 <EarningsEventsPanel />
                 <TradingEarnings />
                 <SocialSentimentBoard />
               </div>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-y-2 md:gap-2 w-full">
                 <Transactions />
                 <MacroDataPanel />
               </div>
+
 
               <SecurityTrustSection />
 
